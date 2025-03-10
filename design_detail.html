@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Stylt - Design Details</title>
+    <meta name="description" content="Design of Stylt">
+    <meta name="keywords" content="Programming Language">
+</head>
+
+<body>
+    <h1>Primary Design Criteria of the Stylt Programming Language</h1>
+        <li>All language constructs and concepts are to be as minimal and orthogonal as possible, while maintaining maximal expressivity</li>
+        <li>Language Primitives (syntax, type theoretic, and semantically) are designed to be as low-level as possible</li>
+        <li>Maximize Expressivity and the Abilities of Computational Constructs</li>
+        <li>Expansive and Expandable Type Theory</li>
+        <li>Well Defined and Specified Semantics
+            <ul><li>Categorical Semantics will be the primary method, but more traditional Denotational Semantics will be discussed and supported by an Operational Semantics and Definitional Interpreter</li></ul></li>
+        <li>Operational Semantics will be presented at both the level of 'program' execution and for compilation (which are ultimately the same)</li>
+        <li>Syntax that enables the above considerations to be maximally expressive</li>
+    </ul>
+
+    <h3>Design Decisions reached by following the above criteria:</h3>
+    <ul>
+        <li>Language Primitives motivated by a novel Process Calculus, Category Theory, Classical Linear Logic</li>
+        <li>Multi-Mode Multi-Modal Dependent Type Theory</li>
+        <li>Semantics are expressed in a Static/Dynamic split presentation
+            <ul>
+                <li>The presentation is most clearly inspired by the work of Robert Harper as laid out in "Practical Foundations for Programming Languages"</li>
+                <li>However, there are several departures and significant alteration to accomodate the Modality Enforced Multi-Phase Semantics</li>
+            </ul>
+        </li>
+        <li>Syntax is inspired and informed by the underlying composition-based semantics</li>
+    </ul>
+    <h3>Design Decisions reached pursuing Primary Design Criteria</h3>
+    <br>
+    <ul>
+        <li>Language Primitives motivated by a novel Process Calculus, Category Theory, Classical Linear Logic</li>
+            <ul>
+            <li>The work by Spivak and others in Applied Category Theory on the Operad of Wiring Diagrams is particulary inspiring</li>
+            </ul>
+        <li>'Type' System which draws heavily from prior work in dependent types, modal logic, and *-Autonomous Categories</li>
+            <ul>
+            <li>The work of Benton, Reed, Pfenning, et al on Modal Logic and Modal Type Theories and the subsequent work on Adjoint logic is a primary influence on the languages design</li>
+            <li>The continuing academic work on Multi-Mode Multi-Modal Dependent Type Theory influence several key aspects of the design</li>
+            <li>Type is used in scare quotes because, as Robert Constable said, Type Theory, and particulary the Function type  'is the most comprehensive theory of effective computability in the sense of deterministic sequential computation'; however, the basis for computation in the language is explicitly non-sequential (i.e. concurrent) and inherently non-deterministic (determinism must be forced on the system via 'types' and program design)</li>
+            </ul>
+        <li>Semantics are expressed in a Static/Dynamic split presentation</li>
+            <ul>
+            <li>The presentation is most clearly inspired by the work of Robert Harper as laid out in "Practical Foundations for Programming Languages"</li>
+            <li>However, there are several departures and significant alteration to accomodate the Modality Enforced Multi-Phase Semantics</li>
+            </ul>
+        <li>Syntax is inspired and informed by the underlying composition-based semantics</li>
+        <li>Several common extentions to simple type theory (i.e. parametric and ad-hoc polymorphism, subtyping, type refinement, etc) are subsumed into the orthoganal basic constructs of the language and the interactions between those constructs</li>
+            <ul>
+            <li>Parametric Polymorphism is achieved by combining dependent types and multi-stage programming</li>
+            <li>Ad-Hoc Polymorphism is achieved almost soley by multi-phase programming</li>
+            <li>Subtyping and Type Refinement are derivative achievements of the adjoint modal type theory</li>
+            <li>examples can continue...</li>
+            </ul>
+        <li> Many common computational systems (i.e. lambda calculus) and type systems (i.e. session types) can be and SHOULD BE encoded in the language merely as distinct modes or types/Universes, not as privileged sublanguages or type theories</li>
+    </ul
+    
+    <h3>A List of Anti-Features</h3>
+    <br>
+    <ul>
+        <li>'Developer Experience', at the expense of any PDC</li>
+            <ul>
+            <li>An example would be having type inference at the expense of restrictions on expressivity</li>
+            <li>Another example would be having implicit arguments, types, modes where such would require a restriction on orthoganality</li>
+            </ul>
+        <li>Simplification of base language to appeal to inexperienced users</li>
+        <li>Adherence to conventions, prior languages, or alledged concensus where such adherence would cut against any PDC</li>
+        <li>Removal or Restriction of capabilities to satisfy the needs of large scale development</li>
+            <ul>
+            <li>There will be methods to allow large scale and distributed development to enforce requirements and specifications as needed</li>
+            </ul>
+        <li>Sacrifice of PDC or specified development goals to satisfy or appeal to any external group of developers or commercial interests</li>
+    </ul>
+</body>
+
+</html>

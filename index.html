@@ -9,73 +9,28 @@
 
 <body>
     <h1>The Stylt Programming Language</h1>
-    <p>A programming language built to enable its creator to code what they wanted in the way they wanted:</p>
-    <br><br>
-    <h3>Primary Design Criteria (PDC):</h3>
+    <p>A programming language built with several design criteria:</p>
     <ul>
-        <li>All language constructs and concepts should be as minimal and orthogonal as possible</li>
-        <li>The base language should Maximize Expressivity and the Abilities of Computational Constructs</li>
-        <li>The Language should have Well Defined and Foramlly Specified Semantics:</li>
-        <ul>
-            <li>The Language should enable the specification of Categorical Semantics and the more traditional Denotational Semantics should be able to be discussed</li>
-            <li>Operational Semantics should be presentable for both the level of 'program' execution and for compilation (which are ultimately the same)</li>
-        </ul>
-        <li>Language Primitives, syntactically, type theoretically, and semantically, should be situated at the lowest possible level of abstraction</li>
-        <li>The Syntax of the language should enable all the above criteria to be Maximally Expressive and Maximally Powerful</li>
+        <li>All language constructs and concepts are to be as minimal and orthogonal as possible, while maintaining maximal expressivity</li>
+        <li>Language Primitives (syntax, type theoretic, and semantically) are designed to be as low-level as possible</li>
+        <li>Expansive and Expandable Type Theory</li>
+        <li>Categorical Semantics</li>
+        <li>Syntax that enables the above considerations to be maximally expressive</li>
     </ul>
-    <br>
-    <h3>Design Decisions reached pursuing PDC and Inspirations for those Decisions:</h3>
+
+    <p>Design Decisions reached by following the above criteria:</p>
     <ul>
-        <li>Language Primitives motivated by Category Theory, Classical Linear Logic, and a novel Process Calculus</li>
-        <li>Many common computational systems (i.e. lambda calculus) and type systems (i.e. session types) can be and SHOULD BE encoded in the language merely as distinct modes, types/Universes, or encoded abstractions not as privileged sublanguages or type theories</li>
-        <li>Several common extentions to simple type theory (i.e. parametric and ad-hoc polymorphism, subtyping, t</li>
-        <ul>
-            <li>Parametric Polymorphism (what little there may be) is achieved by combining dependent types and multi-stage programming</li>
-            <li>Ad-Hoc Polymorphism is achieved almost soley by multi-phase programming</li>
-            <li>Subtyping and Type Refinement are derivative achievements of the adjoint modal type theory</li>
-            <li>examples can continue...</li>
-        </ul>
-        <li>The 'Type' System draws heavily from prior work in dependent types, modal logic, and *-Autonomous Categories</li>
-        <ul>
-            <li>The work of Benton, Reed, Pfenning, et al on Modal Logic and Modal Type Theories and the subsequent work on Adjoint logic is a primary influence on the languages design</li>
-            <li>The continuing academic work on Multi-Mode Multi-Modal Dependent Type Theory influence several key aspects of the design</li>
-            <li>The work on Contextual Modal Logic and Types</li>
-            <li>Type is used in scare quotes because, as Robert Constable said, Type Theory, and particulary the Function type  'is the most comprehensive theory of effective computability in the sense of deterministic sequential computation'; however, the basis for computation in the language is explicitly non-sequential (i.e. concurrent) and inherently non-deterministic (determinism must be forced on the system via 'types' and program design)</li>
-            <ul>
-                <li>There seem to be several good reasons for differintiating the language's 'type' system and the traditional (and very well developed) usage and meaning of the term 'type theory'</li>
-                <ul>
-                <li>Explicitly avoid confusion where similar terminology is used to take advantage of similar semantics</li>
-                <li>Explicitly disclaim those positions and uses which are contrary or wildly divergent to the tradition of type theoretical study</li>
-                <li>The language attempts to explicitly be capable of encoding traditional type theory and then, when discussing the encoding or terms within that encoding, the differentiation between the underlying 'type' theory and the encoded type theory must remain seperable</li>
-                </ul>
-            </ul>
-        </ul>
-        <li>Semantics are expressed in a Static/Dynamic split presentation in the informal and formal definition and specification of the language</li>
-        <ul>
-            <li>The presentation is most clearly inspired by the work of Robert Harper as laid out in "Practical Foundations for Programming Languages"</li>
-            <li>However, there are several departures and significant alteration to accomodate the Modality Enforced Multi-Phase Semantics</li>
-        </ul>
+        <li>Language Primitives motivated by a novel Process Calculus, Category Theory, Classical Linear Logic</li>
+        <li>Multi-Mode Multi-Modal Dependent Type Theory</li>
+        <li>Semantics are expressed in a Static/Dynamic split presentation
+		    <ul>
+		        <li>The presentation is most clearly inspired by the work of Robert Harper as laid out in "Practical Foundations for Programming Languages"</li>
+		        <li>However, there are several departures and significant alteration to accomodate the Modality Enforced Multi-Phase Semantics</li>
+		    </ul>
+		</li>
         <li>Syntax is inspired and informed by the underlying composition-based semantics</li>
     </ul>
-    <br>
-    <h3>A List of Anti-Features:</h3>
-    <ul>
-    <li>'Developer Experience', at the expense of any PDC</li>
-    <ul>
-        <li>An example would be having type inference at the expense of restrictions on expressivity</li>
-        <li>Another example would be having implicit arguments, types, modes where such would require a restriction on orthoganality</li>
-    </ul>
-    <li>Simplification of base language to appeal to inexperienced users</li>
-    <ul>
-        <li>Any 'simplification' would be implemented as a '#lang' style abstraction layer/mode</li>
-    </ul>
-    <li>Adherence to conventions, prior languages, or alledged concensus where such adherence would cut against any PDC</li>
-    <li>Removal or Restriction of capabilities, either computationaly or syntactically, to satisfy the needs of large scale development</li>
-    <ul>
-        <li>There will be methods to allow large scale and distributed development to enforce requirements and specifications as needed and such will have no effect of the base language</li>
-    </ul>
-    <li>Sacrifice of PDC or specified development goals to satisfy or appeal to any external group of developers or commercial interests</li>
-    </ul>
+    <p>For a more detailed listing of the Primary Desing Criteria of Stylt go to the <a href="./design_detail.html">Detail Desing</a> page</p>
 </body>
 
 </html>
