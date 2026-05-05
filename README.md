@@ -10,6 +10,7 @@ A programming language built to enable its creator to code what they wanted in t
     - The Language should enable the specification of Categorical Semantics and the more traditional Denotational Semantics should be able to be discussed
     - Operational Semantics should be presentable for both the level of 'program' execution and for compilation (which are ultimately the same)
   - Language Primitives, syntactically, type theoretically, and semantically, should be situated at the lowest possible level of abstraction
+  - The core design and implementation of any language primitive, feature, or construct is explicitly targeted at the efficient creation of opinionated, composable abstractions rather than providing those abstractions at the language level
   - The Syntax of the language should enable all the above criteria to be Maximally Expressive and Maximally Powerful
 
 ### Design Decisions reached pursuing **PDC** and Inspirations for those Decisions:
